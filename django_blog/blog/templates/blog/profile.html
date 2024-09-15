@@ -1,0 +1,9 @@
+{% extends "blog/base.html" %}
+{% block content %}
+<h2>Your Profile</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ u_form.as_p }}
+    <button type="submit">Update Profile</button>
+</form>
+{% endblock %}
