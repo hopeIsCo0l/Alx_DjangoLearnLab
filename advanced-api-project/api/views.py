@@ -15,7 +15,7 @@ class BookListView(generics.ListCreateAPIView):
     search_fields = ['title', 'author__name']
     ordering_fields = ['title', 'publication_year']
     ordering = ['title']
-
+filters.SearchFilter
 class BookDetailView(generics.RetrieveAPIView):
     queryset = Book.objects.all()
     serializer_class = BookSerializer
